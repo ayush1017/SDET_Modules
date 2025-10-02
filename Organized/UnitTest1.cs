@@ -47,7 +47,30 @@ namespace Organized
             Thread.Sleep(5000);
             home.SearchFunctionality();
         }
+       // Movie Testing
+       [TestMethod]
 
+        public void TC5()
+        {
+            WebdriverFactory factory = new WebdriverFactory();
+            driver = factory.Create(BrowserType.Chrome);
+            Homepage home = new Homepage(driver);
+            Moviepage Movie = new Moviepage(driver);
+            home.GoTO();
+            Thread.Sleep(5000);
+            Movie.MovieFunctionality();
+        }
+        [TestMethod]
+        public void TC6()
+        {
+            WebdriverFactory factory = new WebdriverFactory();
+            driver = factory.Create(BrowserType.Chrome);
+            Homepage home = new Homepage(driver);
+            Moviepage Movie = new Moviepage(driver);
+            home.GoTO();
+            Thread.Sleep(5000);
+            Movie.PageInition();
+        }
 
         [TestCleanup]
         public void Cleanup()
